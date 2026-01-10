@@ -34,6 +34,31 @@
 
             <!-- TOPBAR -->
             <header class="topbar">
+                <span onclick="hamNav()" id="hambar">≡</span>
+
+                <div class="hamnav" id="hamnav">
+                    <nav>
+                        <button onclick="hamClose()" id="hamClose" style="
+             font-size: 20px;
+             width: 40px;
+             height: 40px; 
+             background: #fff;
+             color: #0f172a;
+             text-align: center;
+             font-weight: bold;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             ">⨉</button>
+                        <a class="active">Dashboard</a>
+                        <a href="payment.html">Add Payment</a>
+                        <a href="history.html">History</a>
+                        <a href="stocks.html">Stocks</a>
+                        <a href="profile.html">Profile</a>
+
+                    </nav>
+                </div>
+
                 <span id="email"></span>
             </header>
 
@@ -72,6 +97,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase.js"></script>
     <script src="js/dashboard.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 
 </html>

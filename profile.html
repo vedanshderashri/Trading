@@ -28,41 +28,72 @@
                 <a class="active" href="profile.html">Profile</a>
             </nav>
         </aside>
-        <main class="profile-container">
-            <section class="card profile-card">
+        <div class="main">
+            <header class="topbar">
+                <span onclick="hamNav()" id="hambar">≡</span>
 
-                <div class="avatar">
-                    <span>👤</span>
+                <div class="hamnav" id="hamnav">
+                    <nav>
+                        <button onclick="hamClose()" id="hamClose" style="
+             font-size: 20px;
+             width: 40px;
+             height: 40px; 
+             background: #fff;
+             color: #0f172a;
+             text-align: center;
+             font-weight: bold;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             ">⨉</button>
+                        <a class="active">Dashboard</a>
+                        <a href="payment.html">Add Payment</a>
+                        <a href="history.html">History</a>
+                        <a href="stocks.html">Stocks</a>
+                        <a href="profile.html">Profile</a>
+
+                    </nav>
                 </div>
-                <div class="profile-actions">
-                    <h2 id="profileName"></h2>
-                    <input id="nameInput" type="text" style="display:none;" />
-                    <button id="editBtn" onclick="enableEdit()">Edit</button>
-                    <button id="saveBtn" onclick="saveName()" style="display:none;">Save</button>
 
-                    <style>
-                        #editBtn,
-                        #saveBtn {
-                            width: 50px;
-                            height: 50px;
-                        }
-                    </style>
-                </div>
-                <p id="profileEmail"></p>
-                <button onclick="window.location.href='set-password.html'">
-                    Set / Change Password
-                </button>
+                <span id="email"></span>
+            </header>
 
-                <button onclick="logout()">Logout</button>
+            <main class="profile-container">
+                <section class="card profile-card">
 
-            </section>
-        </main>
+                    <div class="avatar">
+                        <span>👤</span>
+                    </div>
+                    <div class="profile-actions">
+                        <h2 id="profileName"></h2>
+                        <input id="nameInput" type="text" style="display:none;" />
+                        <button id="editBtn" onclick="enableEdit()">Edit</button>
+                        <button id="saveBtn" onclick="saveName()" style="display:none;">Save</button>
 
+                        <style>
+                            #editBtn,
+                            #saveBtn {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        </style>
+                    </div>
+                    <p id="profileEmail"></p>
+                    <button onclick="window.location.href='set-password.html'">
+                        Set / Change Password
+                    </button>
+
+                    <button onclick="logout()">Logout</button>
+
+                </section>
+            </main>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase.js"></script>
     <script src="js/profile.js"></script>
+    <script src="js/navigation.js"></script>
 
 </body>
 

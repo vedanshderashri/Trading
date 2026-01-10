@@ -14,6 +14,10 @@ body {
   height: 100vh;
 }
 
+#button{
+  width: 50px;
+}
+
 /* SIDEBAR */
 .sidebar {
   width: 240px;
@@ -64,7 +68,7 @@ body {
 /* CONTENT */
 .content {
   padding: 20px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 /* GRID */
@@ -87,8 +91,8 @@ body {
 
 /* CARD */
 .card {
-  background: #fff;
   padding: 20px;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
@@ -141,6 +145,7 @@ th, tr, td{
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .profile-card {
@@ -211,4 +216,58 @@ button.danger:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+}
+
+
+#hambar{
+  font-size: 26px;
+  background: #0f172a;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  display: none;
+}
+
+.hamnav{
+  position: absolute;
+  left: -250px;
+  top: 0;
+  width: 70%;
+  background: #0f172a;
+  height: 100%;
+  z-index: 100;
+  padding: 40px;
+  display: none;
+  transition: all .3s;
+}
+.hamnav nav{
+  display: grid;
+  gap: 50px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+.hamnav nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.hamnav>nav>.active{
+  background: rgb(255, 255, 255);
+  color: #0f172a;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  #email{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #hambar{
+    display: block;
+  }
 }
