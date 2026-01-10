@@ -261,7 +261,7 @@ button.danger:hover {
 }
 
 @media screen and (max-width: 500px) {
-  #email{
+  #email-log{
     display: none;
   }
 }
