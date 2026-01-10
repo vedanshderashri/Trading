@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Market Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="spinner"></div>
+  </div>
+  <script src="js/loader.js"></script>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">TradeUI</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="payment.html">Add Payment</a>
+        <a href="history.html">History</a>
+        <a class="active">Stocks</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <span>Market Overview</span>
+      </header>
+
+      <!-- CONTENT -->
+      <section class="content">
+
+        <div class="card">
+          <h3>Live Stock Market Status</h3>
+
+          <!-- TradingView Market Widget -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview-market">
+              <script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"></script>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <!-- TradingView Widget Script -->
+
+</body>
+
+</html>

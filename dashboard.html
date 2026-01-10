@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="spinner"></div>
+  </div>
+  <script src="js/loader.js"></script>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">TradeUI</h2>
+
+      <nav>
+        <a class="active">Dashboard</a>
+        <a href="payment.html">Add Payment</a>
+        <a href="history.html">History</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <span id="email"></span>
+        <button onclick="logout()">Logout</button>
+      </header>
+
+      <!-- CONTENT -->
+      <section class="content">
+
+        <!-- KPIs -->
+        <div class="grid grid-2">
+          <div class="card kpi">
+            <h4>Total Invested</h4>
+            <h1 id="balance">₹0</h1>
+          </div>
+
+          <div class="card">
+            <h4>Market Overview</h4>
+            <iframe src="https://s.tradingview.com/widgetembed/?symbol=NSE:NIFTY&interval=1D&theme=light" height="250"
+              width="100%" frameborder="0">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Payments -->
+        <div class="grid grid-2">
+          <div class="card">
+            <h4>Add Payment</h4>
+            <a href="payment.html"><button id="button">Add Money</button></a>
+            <input id="amount" type="number" placeholder="Amount (₹)" />
+            <input id="note" type="text" placeholder="Note" />
+            <button onclick="addPayment()">Submit</button>
+          </div>
+
+          <div class="card" id="history-card">
+            <h4>Payment History</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Amount</th>
+                  <th>Note</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="history"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Make a Payment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/payment.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="spinner"></div>
+  </div>
+  <script src="js/loader.js"></script>
+  <a href="dashboard.html">
+    <button id="button" style="width: 100px; margin: 20px;">← Back</button>
+  </a>
+  <main class="payment-wrapper">
+    <script src="js/payment-timer.js"></script>
+
+    <div class="payment-card">
+
+      <h2>Send Payment</h2>
+      <p class="subtitle">Use any UPI app to pay</p>
+      
+      <!-- QR CODE -->
+      <div class="qr-box">
+        <img src="assets/qr.svg" alt="UPI QR Code" />
+      </div>
+      
+      <!-- ACCOUNT HOLDER -->
+      <p class="account-name">
+        Account Holder: <strong>Akshat Verma</strong>
+      </p>
+      
+      <p class="upi-id">
+        UPI ID: <strong>6261143456@axl</strong>
+      </p>
+      <p class="timer">
+        Session expires in <span style="color: red;" id="countdown">05:00</span>
+      </p>
+      
+      <!-- UPI ICONS -->
+      <div class="upi-icons">
+        <img src="assets/gpay.webp" alt="Google Pay" />
+        <img src="assets/phonepe.png" alt="PhonePe" />
+        <img src="assets/paytm.png" alt="Paytm" />
+        <img src="assets/bhim.png" alt="BHIM" />
+      </div>
+
+      <p class="note">
+        After payment, return to dashboard and add the amount.
+      </p>
+
+    </div>
+  </main>
+  <script>
+    const SESSION_DURATION = 5 * 60; // 5 minutes in seconds
+    let remainingTime = SESSION_DURATION;
+
+    const countdownEl = document.getElementById("countdown");
+
+    function startTimer() {
+      updateUI();
+
+      const interval = setInterval(() => {
+        remainingTime--;
+
+        updateUI();
+
+        if (remainingTime <= 0) {
+          clearInterval(interval);
+          window.location.href = "dashboard.html";
+        }
+      }, 1000);
+    }
+
+    function updateUI() {
+      const minutes = Math.floor(remainingTime / 60);
+      const seconds = remainingTime % 60;
+
+      countdownEl.innerText =
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(seconds).padStart(2, "0");
+    }
+
+    document.addEventListener("DOMContentLoaded", startTimer);
+  </script>
+
+</body>
+
+</html>

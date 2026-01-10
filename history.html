@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Payment History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="pageLoader" class="page-loader">
+        <div class="spinner"></div>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">TradeUI</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="payment.html">Add Payment</a>
+                <a class="active">History</a>
+                <a href="stocks.html">Stocks</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <span id="email"></span>
+            </header>
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <div class="card">
+                    <h3>Payment History</h3>
+                    <button style="width: 120px;margin-bottom: 10px;" class="danger" onclick="clearHistory()">Clear
+                        History</button>
+                    <button style="width: 120px;margin-bottom: 10px;" onclick="printHistory()">Print</button>
+                    <script>
+                        function printHistory() {
+                            window.print();
+                        }
+                    </script>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Note</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyPage"></tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

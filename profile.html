@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="pageLoader" class="page-loader">
+        <div class="spinner"></div>
+    </div>
+    <script src="js/loader.js"></script>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">TradeUI</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="payment.html">Add Payment</a>
+                <a href="history.html">History</a>
+                <a href="stocks.html">Stocks</a>
+                <a class="active" href="profile.html">Profile</a>
+            </nav>
+        </aside>
+        <main class="profile-container">
+            <section class="card profile-card">
+
+                <div class="avatar">
+                    <span>👤</span>
+                </div>
+                <div class="profile-actions">
+                    <h2 id="profileName"></h2>
+                    <input id="nameInput" type="text" style="display:none;" />
+                    <button id="editBtn" onclick="enableEdit()">Edit</button>
+                    <button id="saveBtn" onclick="saveName()" style="display:none;">Save</button>
+
+                    <style>
+                        #editBtn,
+                        #saveBtn {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    </style>
+                </div>
+                <p id="profileEmail"></p>
+                <button onclick="window.location.href='set-password.html'">
+                    Set / Change Password
+                </button>
+
+                <button onclick="logout()">Logout</button>
+
+            </section>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

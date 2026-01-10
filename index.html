@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Trading Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <main class="container small">
+    <section class="card">
+      <h2>Login</h2>
+
+      <!-- EMAIL -->
+      <input id="email" type="email" placeholder="Email" />
+
+      <!-- PASSWORD LOGIN -->
+      <input id="password" type="password" placeholder="Password" />
+      <button onclick="loginWithPassword()">Login with Password</button>
+
+      <hr />
+
+      <!-- MAGIC LINK LOGIN -->
+      <button onclick="sendMagicLink()">Login with Magic Link</button>
+
+      <p class="hint">
+        You can login using password or receive a login link on email.
+      </p>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>
