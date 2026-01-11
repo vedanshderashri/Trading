@@ -1,17 +1,8 @@
-const navbar = document.getElementById("hamnav");
-const hambar = document.getElementById("hambar");
-const hamcross = document.getElementById("hamClose");
 
+const hamburger = document.getElementById("hambar");
+const nav = document.getElementById("hamnav");
 
-function hamNav(){
-    hambar.addEventListener("click", ()=>{
-        navbar.style.display = "block";
-        navbar.style.left = "0px";
-    })
-}
-function hamClose(){
-    hamcross.addEventListener("click", ()=>{
-        navbar.style.display = "none";
-        navbar.style.left = "-250px";
-    })
-}
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("active");
+});

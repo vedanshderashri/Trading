@@ -26,6 +26,7 @@
                 <a class="active">History</a>
                 <a href="stocks.html">Stocks</a>
                 <a href="profile.html">Profile</a>
+                <a onclick="logout()">Logout</a>
             </nav>
         </aside>
 
@@ -38,27 +39,14 @@
 
                 <div class="hamnav" id="hamnav">
                     <nav>
-                        <button onclick="hamClose()" id="hamClose" style="
-             font-size: 20px;
-             width: 40px;
-             height: 40px; 
-             background: #fff;
-             color: #0f172a;
-             text-align: center;
-             font-weight: bold;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             ">⨉</button>
-                        <a class="active">Dashboard</a>
+                        <a href="dashboard.html">Dashboard</a>
                         <a href="payment.html">Add Payment</a>
-                        <a href="history.html">History</a>
+                        <a href="history.html" class="active">History</a>
                         <a href="stocks.html">Stocks</a>
                         <a href="profile.html">Profile</a>
-
+                        <a onclick="logout()">Logout</a>
                     </nav>
                 </div>
-
                 <span id="email-log"></span>
             </header>
 

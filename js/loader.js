@@ -2,6 +2,6 @@
     const loader = document.getElementById("pageLoader");
     if (loader) {
       loader.classList.add("hidden");
-      setTimeout(() => loader.remove(), 300);
+      setTimeout(() => loader.remove(), 100);
     }
   });

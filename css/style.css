@@ -218,7 +218,6 @@ button.danger:hover {
   transition: opacity 0.3s ease;
 }
 
-
 #hambar{
   font-size: 26px;
   background: #0f172a;
@@ -227,19 +226,24 @@ button.danger:hover {
   color: #fff;
   text-align: center;
   display: none;
+  cursor: pointer;
 }
 
-.hamnav{
-  position: absolute;
-  left: -250px;
+.hamnav {
+  position: fixed;
   top: 0;
-  width: 70%;
-  background: #0f172a;
+  bottom: 0;
+  right: -260px;
+  width: 260px;
   height: 100%;
-  z-index: 100;
-  padding: 40px;
-  display: none;
-  transition: all .3s;
+  background: #0f172a;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.08);
+  transition: right 0.35s ease;
+  padding: 30px 20px;
+}
+
+.hamnav.active {
+  right: 0;
 }
 .hamnav nav{
   display: grid;
@@ -270,4 +274,14 @@ button.danger:hover {
   #hambar{
     display: block;
   }
+}
+
+.stocks{
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.stocks div{
+  width: 100% !important;
 }

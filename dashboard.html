@@ -26,6 +26,7 @@
         <a href="history.html">History</a>
         <a href="stocks.html">Stocks</a>
         <a href="profile.html">Profile</a>
+        <a onclick="logout()">Logout</a>
       </nav>
     </aside>
 
@@ -38,25 +39,12 @@
 
         <div class="hamnav" id="hamnav">
           <nav>
-            <button onclick="hamClose()" id="hamClose" 
-            style="
-             font-size: 20px;
-             width: 40px;
-             height: 40px; 
-             background: #fff;
-             color: #0f172a;
-             text-align: center;
-             font-weight: bold;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             ">⨉</button>
-            <a class="active">Dashboard</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
             <a href="payment.html">Add Payment</a>
             <a href="history.html">History</a>
             <a href="stocks.html">Stocks</a>
             <a href="profile.html">Profile</a>
-
+            <a onclick="logout()">Logout</a>
           </nav>
         </div>
 
@@ -79,6 +67,9 @@
             <iframe src="https://s.tradingview.com/widgetembed/?symbol=NSE:NIFTY&interval=1D&theme=light" height="250"
               width="100%" frameborder="0">
             </iframe>
+            <a href="https://www.nseindia.com/">
+                <button >Track More</button>
+              </a>
           </div>
         </div>
 

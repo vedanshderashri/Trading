@@ -26,6 +26,7 @@
         <a href="history.html">History</a>
         <a class="active">Stocks</a>
         <a href="profile.html">Profile</a>
+        <a onclick="logout()">Logout</a>
       </nav>
     </aside>
 
@@ -38,24 +39,12 @@
 
         <div class="hamnav" id="hamnav">
           <nav>
-            <button onclick="hamClose()" id="hamClose" style="
-             font-size: 20px;
-             width: 40px;
-             height: 40px; 
-             background: #fff;
-             color: #0f172a;
-             text-align: center;
-             font-weight: bold;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             ">⨉</button>
-            <a class="active">Dashboard</a>
+            <a href="dashboard.html">Dashboard</a>
             <a href="payment.html">Add Payment</a>
             <a href="history.html">History</a>
-            <a href="stocks.html">Stocks</a>
+            <a href="stocks.html" class="active">Stocks</a>
             <a href="profile.html">Profile</a>
-
+            <a onclick="logout()">Logout</a>
           </nav>
         </div>
 
@@ -65,15 +54,14 @@
       <!-- CONTENT -->
       <section class="content">
 
-        <div class="card">
+        <div class="stocks">
           <h3>Live Stock Market Status</h3>
-
-          <!-- TradingView Market Widget -->
-          <div class="tradingview-widget-container">
-            <div id="tradingview-market">
-              <script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"></script>
-            </div>
-          </div>
+              <!-- <script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"></script> -->
+              <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js">
+              </script>
+              <a href="https://www.nseindia.com/">
+                <button>Track More</button>
+              </a>
         </div>
 
       </section>

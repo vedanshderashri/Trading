@@ -37,13 +37,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* QR */
-.qr-box {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
+
 
 .qr-box img {
   width: 220px;
@@ -66,8 +60,7 @@ body {
 }
 
 .upi-icons img {
-  width: 44px;
-  height: 44px;
+  width: 130px;
   object-fit: contain;
 }
 
